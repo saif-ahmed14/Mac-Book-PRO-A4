@@ -2,3 +2,17 @@
 body{
     background-color: #ebebeb;
 }
+
+input:hover{
+    background-color: lightgray;
+}
+
+hr{
+    border-top: 1px solid black;
+    font-weight: 800;
+}
+
+.memory-area p:hover, .storage-area p:hover, .delivery-area p:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
