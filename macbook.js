@@ -109,7 +109,7 @@ document.getElementById('apply-btn').addEventListener('click', function () {
     const withoutDiscountAmount = parseFloat(document.getElementById('total-cost').innerText);
     const promoCode = document.getElementById('promo-code').value;
 
-    if (promoCode == 'steavekaku') {
+    if (promoCode == 'stevekaku') {
         document.getElementById('discount-total-cost').innerText = withoutDiscountAmount - (0.2 * withoutDiscountAmount);
     }
     document.getElementById('promo-code').value = '';
