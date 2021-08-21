@@ -4,10 +4,14 @@ function totalMemoryCost(extraMemory) {
     const previousDeliveryCost = parseFloat(document.getElementById('delivery-cost').innerText);
 
     if (extraMemory == 0) {
-        document.getElementById('total-cost').innerText = 1299 + 0;
+        const totalAmount = 1299 + 0 + previousStorageCost + previousDeliveryCost;
+        document.getElementById('total-cost').innerText = totalAmount;
+        document.getElementById('discount-total-cost').innerText = totalAmount;
     }
     else if (extraMemory == 180) {
-        document.getElementById('total-cost').innerText = 1299 + 180 + previousStorageCost + previousDeliveryCost;
+        const totalAmount = 1299 + 180 + previousStorageCost + previousDeliveryCost;
+        document.getElementById('total-cost').innerText = totalAmount;
+        document.getElementById('discount-total-cost').innerText = totalAmount;
     }
 }
 
@@ -18,13 +22,19 @@ function totalStorageCost(extraStorage) {
     const previousDeliveryCost = parseFloat(document.getElementById('delivery-cost').innerText);
 
     if (extraStorage == 0) {
-        document.getElementById('total-cost').innerText = 1299 + 0 + previousMemoryCost + previousDeliveryCost;
+        const totalAmount = 1299 + 0 + previousMemoryCost + previousDeliveryCost
+        document.getElementById('total-cost').innerText = totalAmount;
+        document.getElementById('discount-total-cost').innerText = totalAmount;
     }
     else if (extraStorage == 100) {
-        document.getElementById('total-cost').innerText = 1299 + 100 + previousMemoryCost + previousDeliveryCost;
+        const totalAmount = 1299 + 100 + previousMemoryCost + previousDeliveryCost;
+        document.getElementById('total-cost').innerText = totalAmount;
+        document.getElementById('discount-total-cost').innerText = totalAmount;
     }
     else if (extraStorage == 180) {
-        document.getElementById('total-cost').innerText = 1299 + 180 + previousMemoryCost + previousDeliveryCost;
+        const totalAmount = 1299 + 180 + previousMemoryCost + previousDeliveryCost;
+        document.getElementById('total-cost').innerText = totalAmount;
+        document.getElementById('discount-total-cost').innerText = totalAmount;
     }
 }
 
@@ -35,10 +45,14 @@ function totalDeliveryCost(extraDelivery) {
     const previousStorageCost = parseFloat(document.getElementById('storage-cost').innerText);
 
     if (extraDelivery == 0) {
-        document.getElementById('total-cost').innerText = 1299 + 0 + previousMemoryCost + previousStorageCost;
+        const totalAmount = 1299 + 0 + previousMemoryCost + previousStorageCost;
+        document.getElementById('total-cost').innerText = totalAmount;
+        document.getElementById('discount-total-cost').innerText = totalAmount;
     }
     else if (extraDelivery == 20) {
-        document.getElementById('total-cost').innerText = 1299 + 20 + previousMemoryCost + previousStorageCost;
+        const totalAmount = 1299 + 20 + previousMemoryCost + previousStorageCost;
+        document.getElementById('total-cost').innerText = totalAmount;
+        document.getElementById('discount-total-cost').innerText = totalAmount;
     }
 }
 
@@ -85,12 +99,11 @@ document.getElementById('premium-delivery').addEventListener('click', function (
 
 //Event for promo code discount button
 document.getElementById('apply-btn').addEventListener('click', function () {
-    const discountInput = document.getElementById('discount-total-cost').innerText;
-    const discountTotal = parseFloat(discountInput);
+    const withoutDiscountAmount = parseFloat(document.getElementById('total-cost').innerText);
     const promoCode = document.getElementById('promo-code').value;
 
     if (promoCode == 'steavekaku') {
-        document.getElementById('discount-total-cost').innerText = discountTotal - (0.2 * discountTotal);
-        document.getElementById('promo-code').value = ' ';
+        document.getElementById('discount-total-cost').innerText = withoutDiscountAmount - (0.2 * withoutDiscountAmount);
     }
+    document.getElementById('promo-code').value = '';
 })

@@ -1,18 +1,11 @@
-/* For checking purpose, style link is wroking or not */
-body{
-    background-color: #ebebeb;
-}
-
-input:hover{
-    background-color: lightgray;
-}
-
 hr{
+    width: 50%;
     border-top: 1px solid black;
     font-weight: 800;
 }
 
-.memory-area p:hover, .storage-area p:hover, .delivery-area p:hover{
-    background-color: lightgray;
+.memory-area p:hover, .storage-area p:hover, .delivery-area p:hover, input:hover{
+    color: white;
+    background-color: rgb(199, 192, 192);
     cursor: pointer;
 }
