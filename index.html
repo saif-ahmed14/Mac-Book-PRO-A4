@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,22 +16,26 @@
     <!-- Tailwind CSS -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body>
     <header>
-
+        <!-- Empty header section -->
     </header>
+
     <main>
         <section class="flex w-3/4 mx-auto mt-16 gap-16">
-            <div class="w-2/5">
+            <section class="w-2/5">
                 <img src="images/mac.png" alt="">
-            </div>
-            <div class="w-3/5">
+            </section>
+
+            <section class="w-3/5">
                 <div>
                     <h3 class="text-4xl font-semibold">Customize your Blue 24-inch iMac with Apple M1 chip.</h3>
                     <p class="my-4 mb-4">Apple M1 chip with 8-core CPU 4 performance cores and 4 efficiency cores, 7-core GPU and 16-core Neutral Engine 8GB unified memory 256GB SSD storage Two Thunderbolt/USB 4 ports Magic Mouse Magic Keyboard US English.</p>
                 </div>
 
 
+                <!-- Memory area started here -->
                 <div class="my-4 memory-area">
                 <h3 class="text-2xl font-medium">Memory</h3>
 
@@ -39,8 +44,9 @@
                 </div>
 
 
+                <!-- Storage area started here -->
                 <div class="my-4 storage-area">
-                    <h3 class="text-2xl font-medium">Storage</h3>
+                    <h3 class="text-2xl font-medium my-1">Storage</h3>
                     
                     <p id="storage256GB" class="me-4 my-2 p-1 w-2/6 inline-block rounded border border-gray-500 font-medium">256GB SSD storage</p>
                     <p id="storage512GB" class="me-4 my-2 p-1 w-2/6 inline-block rounded border border-gray-500 font-medium">512GB SSD storage</p>
@@ -48,13 +54,16 @@
                 </div>
 
 
+                <!-- Choose delivery option started here -->
                 <div class="my-4 delivery-area">
-                <h3 class="text-2xl font-medium">Choose your delivery option</h3>
+                <h3 class="text-2xl font-medium my-4">Choose your delivery option</h3>
 
                 <p id="free-delivery" class="w-6/12 me-4 my-2 p-1 rounded  border border-gray-500  font-medium">Friday, Aug 25 FREE Prime Delivery</p>
-                <p id="premium-delivery" class="w-6/12 me-4 my-2 p-1 rounded  border border-gray-500  font-medium">Friday, Aug 21 Delivery charge $20</p>
+                <p id="quick-delivery" class="w-6/12 me-4 my-2 p-1 rounded  border border-gray-500  font-medium">Friday, Aug 21 Delivery charge $20</p>
                 </div>
 
+
+                <!-- Total cost calculation section started here -->
                 <div class="my-12 price-count">
                     <p class="font-medium my-2 text-xl"><span class="w-60 inline-block">Best Price</span> $1299</p>
                     <p class="font-medium my-2 text-xl"><span class="w-60 inline-block">Extra Memory Cost</span> $<span id="memory-cost">0</span></p>
@@ -64,17 +73,24 @@
                     <p class="font-medium mt-2 mb-2 text-xl"><span class="w-60 inline-block">Total Price</span> $<span id="total-cost">1299</span></p>
                 </div>
 
+
+                <!-- Using promo code for discount -->
                 <div class="my-4">
                     <h3 class="text-2xl font-medium">Add Promo Code</h3>
                     <input id="promo-code" class="w-6/12 me-4 my-2 p-1 rounded border border-gray-500 font-medium" type="text">
-                    <button id="apply-btn" class="text-white bg-red-500 py-2 px-8 rounded mx-8">Apply</button>
+                    <button id="apply-btn" class="text-white bg-blue-500 py-2 px-8 rounded mx-8">Apply</button>
                 </div>
-            </div>
+            </section>
+
         </section>
-        <div>
+
+        <!-- Discount section -->
+        <section>
             <h3 class="text-4xl text-center mt-4 mb-8">Total: $<span id="discount-total-cost">1299</span></h3>
-        </div>
+        </section>
     </main>
+
     <script src="macbook.js"></script>
 </body>
+
 </html>
